@@ -1,0 +1,246 @@
+{
+    "english": [
+        {
+            "element": ".navbar",
+            "popover": {
+                "title": "Welcome to Chiara Gesture's training portal!",
+                "description": "First off, follow this short guide to know how this webpage works. <br><br> This is the navigation bar, from where you'll be able to access all the sites within the page. Let's see what these buttons do...",
+                "position": "bottom-center"
+            }
+        },
+        {
+            "element":"#Collect-nav-link",
+            "popover": {
+                "title": "Collect button",
+                "description": "By clicking this button, you'll access the page from where you'll be able to record sample videos and upload them to Chiara.",
+                "position": "mid-left"
+            }
+        },
+        {
+            "element": "#Train-nav-link",
+            "popover": {
+                "title": "Train button",
+                "description": "By clicking this button, you'll access the training page. In said page, you can train a neural network with artificial intelligence, and teach Chiara to recognise the gestures uploaded from the collect page.",
+                "position": "mid-left"
+            }
+        },
+        {
+            "element": "#Play-nav-link",
+            "popover": {
+                "title": "Play button",
+                "description": "Clicking this button will lead you to the play site. Here you can have fun testing Chiara's ability to recognise the gestures based on the videos you recorded on the collect page.",
+                "position": "mid-left"
+            }
+        },
+        {
+            "element": "#namespace",
+            "popover": {
+                "title": "Choose a gesture complexity",
+                "description": "By clicking on the rectangle, a dropdown menu will appear. In that dropdown, choose a gesture complexity to tell Chiara how sophisticated you're going to get :)",
+                "position": "bottom-right"
+            }
+        },
+        {
+            "element": "#gesture",
+            "popover": {
+                "title": "Choose gesture",
+                "description": "When you click on the rectangle, depending on what complexity you chose on the prior step, different gestures will appear. Choose one of them!",
+                "position": "bottom-right"
+            }
+        },
+        {
+            "element": "#collect-main-body",
+            "popover": {
+                "title": "Collect's main interface",
+                "description": "In just this section of the collect page, you will be able to record your sample video and send it to Chiara. But what do these buttons do?",
+                "position": "bottom-center"
+            }
+        },
+        {
+            "element": "#maxRecordingTimeInput",
+            "popover": {
+                "title": "Maximum recording time",
+                "description": "Here, you can specify how long (at a maximum), you want the recording to last. It should be between 5 and 30 seconds. If you choose not to change it, the default value is 5 seconds.",
+                "position": "bottom-center"
+            }
+        },
+        {
+            "element": "#startRecordingDelay",
+            "popover": {
+                "title": "Recording delay",
+                "description": "In this field, you can set a delay between you pressing the start button and the recording starting. Please note that when the recording starts, you should be in the correct position. The delay should be between 3 and 30 seconds (by default it is set to 5).",
+                "position": "bottom-center"
+            }
+        },
+        {
+            "element": "#startBtn",
+            "popover": {
+                "title": "Start button",
+                "description": "When you feel ready to start or if you want to record another sample of the same gesture, just click this button. <u>But not yet!</u> There are still some things I have to show you...",
+                "position": "bottom-center"
+            }
+        },
+        {
+            "element": "#stopBtn",
+            "popover": {
+                "title": "Stop button",
+                "description": "If you think your sample video is complete, or if you want to start a new one, press this button to stop the recording immediately.",
+                "position": "bottom-center"
+            }
+        },
+        {
+            "element": "#uploadBtn",
+            "popover": {
+                "title": "Upload button",
+                "description": "After a successful recording, click the upload button to send your video to Chiara! Note that Chiara will receive the video linked with the gesture and gesture complexity you chose before, so don't upload a sample video that doesn't match your gesture selection.",
+                "position": "bottom-center"
+            }
+        },
+        {
+            "element": "#preview-container",
+            "popover": {
+                "title": "Preview and recorded section",
+                "description": "While you record your sample video, you'll always be able to see yourself in this camera feed. <br><br> Also, when a recording is stopped or finished, the recording will be available to you right here.",
+                "position": "mid-right"
+            }
+        },
+        {
+            "element": "#example-gesture-video-container",
+            "popover": {
+                "title": "Example gesture video",
+                "description": "Once you select a gesture and a gesture complexity, a recorded video from one of our team members will appear right here for you to learn what your selected gesture is about. Based on this video, you'll have to replicate what you've seen, on the sample video you are taking.",
+                "position": "mid-left"
+            }
+        },
+        {
+            "element": "#collect-main-body",
+            "popover": {
+                "title": "You're ready 🎉",
+                "description": "Now that I've shown you around the collect site, you are ready to record your own samples!",
+                "position": "bottom-center"
+            }
+        }
+    ],
+
+    "spanish": [
+        {
+            "element": ".navbar",
+            "popover": {
+                "title": "Bienvenido al portal de entrenamiento de Chiara Gesture!",
+                "description": "Antes de nada, sigue esta breve guía para comprender cómo funciona esta web. <br><br> Esta es la barra de navegación, mediante la cual podrás acceder a todas las páginas. Vamos a ver para qué sirven los botones...",
+                "position": "bottom-center"
+            }
+        },
+        {
+            "element": "#Collect-nav-link",
+            "popover": {
+                "title": "Botón de la página collect",
+                "description": "Al hacer click en este botón, accederás a la página en la cual grabarás tus vídeos de muestra y los subirás a Chiara.",
+                "position": "mid-left"
+            }
+        },
+        {
+            "element": "#Train-nav-link",
+            "popover": {
+                "title": "Botón de la página train",
+                "description": "Al hacer click en este botón, accederás a la página de entrenamiento. En ella se puede entrenar una red neuronal para que mediante inteligencia artificial reconozca los gestos que hemos subido desde la página collect.",
+                "position": "mid-left"
+            }
+        },
+        {
+            "element": "#Play-nav-link",
+            "popover": {
+                "title": "Botón de la página play",
+                "description": "Pinchando en este botón, accederás a la página de juego, en la cual podrás jugar con la red neuronal que has entrenado.",
+                "position": "mid-left"
+            }
+        },
+        {
+            "element": "#namespace",
+            "popover": {
+                "title": "Elije la complejidad del gesto",
+                "description": "Haciendo click en este rectángulo, podrás ver diferentes complejidades de gestos. Selecciona una para poder decirle a Chiara qué complejidad de gesto vas a grabar",
+                "position": "bottom-right"
+            }
+        },
+        {
+            "element": "#gesture",
+            "popover": {
+                "title": "Elije gesto",
+                "description": "En base a la complejidad elejida en el paso anterior, al hacer click en el rectángulo, te van a aparecer diferentes gestos. Elije uno!",
+                "position": "bottom-right"
+            }
+        },
+        {
+            "element": "#collect-main-body",
+            "popover": {
+                "title": "Interfaz de collect",
+                "description": "Esta sección es la interfaz principal de la página collect. Vamos a ver para qué sirven cada uno de estos campos"
+            }
+        },
+        {
+            "element": "#maxRecordingTimeInput",
+            "popover": {
+                "title": "Tiempo máximo de grabación",
+                "description": "Aquí puedes especificar cómo de larga (como máximo) quieres que sea tu grabación. Debe ser una duración de entre 5 y 30 segundos. Si no cambias la selección, por defecto son 5 segundos.",
+                "position": "bottom-center"
+            }
+        },
+        {
+            "element": "#startRecordingDelay",
+            "popover": {
+                "title": "Tiempo de preparación",
+                "description": "En este campo, puedes establecer un tiempo de preparación que comenzará al pulsar el botón de start y terminará, pasados los segundos establecidos, al iniciarse la cámara. Recuerda que cuando empiece la grabación deberás estar en la posición correcta. El tiempo debe oscilar entre los 3 y los 30 segundos (por defecto se establece a 5).",
+                "position": "bottom-center"
+            }
+        },
+        {
+            "element": "#startBtn",
+            "popover": {
+                "title": "Botón de comienzo",
+                "description": "Cuando estés preparado para tomar una muestra nueva, haz click en este botón para comenzar. <u>¡Pero todavía no!</u>, hay cosas que me falta por enseñarte...",
+                "position": "bottom-center"
+            }
+        },
+        {
+            "element": "#stopBtn",
+            "popover": {
+                "title": "Botón de parada",
+                "description": "Si crees que tu vídeo de muestra está completo, o si quieres hacer uno nuevo, pulsa este botón para detener la grabación al instante.",
+                "position": "bottom-center"
+            }
+        },
+        {
+            "element": "#uploadBtn",
+            "popover": {
+                "title": "Botón de subida de contenidos",
+                "description": "Al terminar una grabación, haz click en este botón para mandárselo a Chiara. Recuerda que Chiara recibirá este vídeo con referencias al gesto y la complejidad del gesto que has seleccionado previamente, así que ¡no mandes vídeos que no se correspondan con tu selección!.",
+                "position": "bottom-center"
+            }
+        },
+        {
+            "element": "#preview-container",
+            "popover": {
+                "title": "Vista previa y sección de grabado",
+                "description": "Cuando estés tomando una muestra, siempre podrás ver tu cámara en esta sección. <br><br> Además, cuando termines tu grabación, esta estará disponible justo aquí, en el mismo sitio.",
+                "position": "mid-right"
+            }
+        },
+        {
+            "element": "#example-gesture-video-container",
+            "popover": {
+                "title": "Vídeo de ejemplo",
+                "description": "Una vez que selecciones un gesto y su correspondiente complejidad, aquí te aparecerá un vídeo de uno de nuestros miembros del equipo realizando el gesto. Tendrás que replicar este gesto en tus muestras.",
+                "position": "mid-left"
+            }
+        },
+        {
+            "element": "#collect-main-body",
+            "popover": {
+                "title": "Estás listo 🎉",
+                "description": "Ahora que te he enseñado la página de recolección, estás preparado para tomar tus propias muestras. ¡Adelante!",
+                "position": "bottom-center"
+            }
+        }
+    ]
+}

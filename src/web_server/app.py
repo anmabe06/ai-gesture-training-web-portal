@@ -40,6 +40,7 @@ def index():
 def collect():
     namespace_selected = request.args.get('namespace', None)
     gesture_selected = request.args.get('gesture', None)
+    step_number = request.args.get('sn', None)
 
     csv_filepath = os.path.join(config.ROOT_DIR, 'gestures_list.csv')
     gestures: List[Gesture] = gm.get_gestures_from_csv_file(csv_filepath)
@@ -61,7 +62,8 @@ def collect():
         namespace_selected=namespace_selected,
         gesture_selected=gesture_selected,
         gesture=gesture,
-        gestures=gestures
+        gestures=gestures,
+        step_number=step_number
     )
 
 

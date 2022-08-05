@@ -7,6 +7,39 @@
     let gestures = JSON.parse('{{gestures|tojson}}');
     console.log(gestures);
   </script>
+  <script>
+    function changeInGestureNamespaceSelection(form){
+      if(document.getElementById("driver-page-overlay") != null){
+        document.querySelector('input[name="sn"]').value = "4"
+        form.submit();
+      }
+      form.submit();
+    }
+
+    function changeInGestureSelection(form){
+      if(document.getElementById("driver-page-overlay") != null){
+        document.querySelector('input[name="sn"]').value = "5"
+        form.submit();
+      }
+      form.submit();
+    }
+  </script>
+  {% if step_number%}
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        let status = document.getElementsByClassName("nav-link active")[0].innerHTML.toLocaleLowerCase();
+        stepNumber = parseInt("{{step_number}}");
+        tutorial.init(status, 'spanish', stepNumber);
+      });
+    </script>
+  {% else %}
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        let status = document.getElementsByClassName("nav-link active")[0].innerHTML.toLocaleLowerCase();
+        tutorial.init(status);
+      });
+    </script>
+  {% endif %}
 {% endblock js %}
 {% block nav_form_extra %}
   <div class="row mt-2 justify-content-between">
@@ -16,7 +49,7 @@
               title="gesture"
               id="gesture"
               name="gesture"
-              onchange="this.form.submit()">
+              onchange="changeInGestureSelection(this.form)">
         <option value="" {% if gesture == '' %} selected{% endif %}>
         </option>
         {% for gesture in gestures %}
@@ -26,12 +59,13 @@
             {{ gesture }}
           </option>
         {% endfor %}
+        <input type="hidden" name="sn" id="stepNumberForTutorial">
       </select>
     </div>
   </div>
 {% endblock nav_form_extra %}
 {% block content %}
-  <div class="row align-items-center">
+  <div class="row align-items-center" id="collect-main-body">
     <div class="col-6">
       <div class="controls-container py-5">
         <div id="controls" class="form-inline">
@@ -68,7 +102,7 @@
           </div>
         </div>
         <div id="countdown" class="flex-column">
-          <h1>Comenzando en..</h1>
+          <h1>Starting in..</h1>
           <h2 id="countdown-text" class="display-1">-1</h2>
         </div>
       </div>
@@ -95,7 +129,7 @@
         </video>
       </div>
     </div>
-    <div class="col-6">
+    <div class="col-6" id="example-gesture-video-container">
       {% if gesture_selected %}
         <h2>Sample video</h2>
         {% if gesture.sample_video %}
