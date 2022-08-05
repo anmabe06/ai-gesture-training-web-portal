@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block js %}
+  let namespaceData = JSON.parse('{{namespace_data|tojson}}');
+  console.log(namespaceData);
+{% endblock %}
+
+{% block content %}
+  WIP
+{% endblock %}

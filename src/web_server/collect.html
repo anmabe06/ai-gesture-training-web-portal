@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% block js %}
+  <script src="{{ url_for('static', filename='js/collect.js') }}"></script>
+  <script>
+    let gesture_selected = '{{gesture_selected}}';
+    let namespace_selected = '{{namespace_selected}}';
+    let gestures = JSON.parse('{{gestures|tojson}}');
+    console.log(gestures);
+  </script>
+{% endblock js %}
+{% block nav_form_extra %}
+  <div class="row mt-2 justify-content-between">
+    <label for="gesture" class="col-auto col-form-label">Gesture:</label>
+    <div class="col-auto">
+      <select class="form-control"
+              title="gesture"
+              id="gesture"
+              name="gesture"
+              onchange="this.form.submit()">
+        <option value="" {% if gesture == '' %} selected{% endif %}>
+        </option>
+        {% for gesture in gestures %}
+          <option value="{{ gesture }}"
+                  name="{{ gesture }}"
+                  {% if gesture == gesture_selected %} selected{% endif %}>
+            {{ gesture }}
+          </option>
+        {% endfor %}
+      </select>
+    </div>
+  </div>
+{% endblock nav_form_extra %}
+{% block content %}
+  <div class="row align-items-center">
+    <div class="col-6">
+      <div class="controls-container py-5">
+        <div id="controls" class="form-inline">
+          <div class="form-group mb-2 w-100 justify-content-between">
+            <label class="col-auto col-form-label" for="maxRecordingTimeInput">Maximum recording time:</label>
+            <div class="form-inline">
+              <input class="form-control col-xs-6"
+                     id="maxRecordingTimeInput"
+                     name="maxRecordingTimeInput"
+                     type="number"
+                     value="5"
+                     min="5"
+                     max="30">
+              <label class="col-auto col-form-label" for="maxRecordingTimeInput">segs</label>
+            </div>
+          </div>
+          <div class="form-group mb-2 w-100 justify-content-between">
+            <label class="col-auto col-form-label" for="startRecordingDelay">Start recording delay:</label>
+            <div class="form-inline">
+              <input class="form-control col-xs-2"
+                     id="startRecordingDelay"
+                     name="startRecordingDelay"
+                     type="number"
+                     value="5"
+                     min="3"
+                     max="30">
+              <label class="col-auto col-form-label" for="startRecordingDelay">segs</label>
+            </div>
+          </div>
+          <div class="form-group mt-2 w-100 justify-content-center">
+            <button class="btn btn-primary mx-1" id="startBtn">Start</button>
+            <button class="btn btn-light mx-1" id="stopBtn">Stop</button>
+            <button class="btn btn-light mx-1" id="uploadBtn">Upload</button>
+          </div>
+        </div>
+        <div id="countdown" class="flex-column">
+          <h1>Comenzando en..</h1>
+          <h2 id="countdown-text" class="display-1">-1</h2>
+        </div>
+      </div>
+      <div id="preview-container" class="mt-3 flex-column">
+        <h2>Preview</h2>
+        {# <video id="preview" width="100%" height="auto" autoplay muted></video> #}
+        <video id="preview" width="100%" height="auto" autoplay muted>
+        </video>
+      </div>
+      <div id="recording-container" class="mt-3 flex-column">
+        <h2>Recording</h2>
+        <video id="recording"
+               width="100%"
+               height="auto"
+               controls
+               autoplay
+               loop
+               muted>
+        </video>
+      </div>
+      <div id="recorded-container" class="mt-3 flex-column">
+        <h2>Recorded</h2>
+        <video id="recorded" width="100%" height="auto" controls autoplay loop muted>
+        </video>
+      </div>
+    </div>
+    <div class="col-6">
+      {% if gesture_selected %}
+        <h2>Sample video</h2>
+        {% if gesture.sample_video %}
+          <video width="100%"
+                 height="auto"
+                 src="{{ gesture.sample_video }}"
+                 controls
+                 autoplay
+                 loop
+                 muted/>
+        {% else %}
+          <p>No sample video yet</p>
+        {% endif %}
+      {% else %}
+        <p>No gesture selected</p>
+      {% endif %}
+    </div>
+  </div>
+{% endblock content %}

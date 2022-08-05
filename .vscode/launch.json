@@ -1,0 +1,187 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Web Server",
+            "type": "python",
+            "request": "launch",
+            "module": "flask",
+            "env": {
+                "FLASK_APP": "src/web_server/app.py",
+                "FLASK_ENV": "development"
+            },
+            "args": [
+                "run",
+                "--no-debugger"
+            ],
+            "jinja": true,
+            "justMyCode": true
+        },
+        {
+            "name": "GM: create_local_dirs",
+            "type": "python",
+            "request": "launch",
+            "program": "gesture_manager.py",
+            "args": [
+                "create_local_dirs",
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "subProcess": true
+        },
+        {
+            "name": "GM: create_local_dirs from file (override)",
+            "type": "python",
+            "request": "launch",
+            "program": "gesture_manager.py",
+            "args": [
+                "create_local_dirs",
+                "-o",
+                "-f",
+                "gestures_list.csv"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "subProcess": true
+        },
+        {
+            "name": "GM: rename original videos",
+            "type": "python",
+            "request": "launch",
+            "program": "gesture_manager.py",
+            "args": [
+                "rename_original_videos",
+                "--append-original-filename",
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "subProcess": true
+        },
+        {
+            "name": "GM: rename original videos (force, ignore-s3)",
+            "type": "python",
+            "request": "launch",
+            "program": "gesture_manager.py",
+            "args": [
+                "rename_original_videos",
+                "--append-original-filename",
+                "-f",
+                "--ignore-local",
+                "--ignore-s3",
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "subProcess": true
+        },
+        {
+            "name": "GM: help",
+            "type": "python",
+            "request": "launch",
+            "program": "gesture_manager.py",
+            "args": [
+                "-h",
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "subProcess": true
+        },
+        {
+            "name": "GM: download all",
+            "type": "python",
+            "request": "launch",
+            "program": "gesture_manager.py",
+            "args": [
+                "download",
+                "-a",
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "GM: upload all",
+            "type": "python",
+            "request": "launch",
+            "program": "gesture_manager.py",
+            "args": [
+                "upload",
+                "-a",
+                "-vv",
+                "-vv",
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "GM: process all gestures",
+            "type": "python",
+            "request": "launch",
+            "program": "gesture_manager.py",
+            "args": [
+                "process",
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "GM: process single gesture (single hand)",
+            "type": "python",
+            "request": "launch",
+            "program": "gesture_manager.py",
+            "args": [
+                "process",
+                "-r",
+                "-g",
+                "single-hand/all-fingertips-together",
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "GM: process all gestures (single hand)",
+            "type": "python",
+            "request": "launch",
+            "program": "gesture_manager.py",
+            "args": [
+                "process",
+                "-r",
+                "-g",
+                "single-hand/all-fingertips-together",
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "GM: process all gestures (single hand, single sample)",
+            "type": "python",
+            "request": "launch",
+            "program": "gesture_manager.py",
+            "args": [
+                "process",
+                "-r",
+                "-g",
+                "single-hand/all-fingertips-together",
+                "-s",
+                "2",
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "GM: process gesture (multi hand)",
+            "type": "python",
+            "request": "launch",
+            "program": "gesture_manager.py",
+            "args": [
+                "process",
+                "-r",
+                "-g",
+                "multi-hand/index-on-palm",
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+    ]
+}

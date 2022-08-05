@@ -1,0 +1,36 @@
+.pop-up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(15px);
+    display: none;
+    z-index: 1;
+}
+
+#loader-outer-circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 25vw;
+    height: 25vw;
+    border-radius: 50%;
+    animation: spin 3s linear infinite;
+}
+
+#loader-inner-circle{
+    box-shadow: 0 18vw 0 rgb(189, 189, 189), 0 -18vw 0 0.5vw rgb(189, 189, 189), -18vw 0 0 0.5vw grey, 18vw 0 0 0.5vw grey;
+    width: 22vw;
+    height: 22vw;
+    border-radius: 50%;
+}
+
+@keyframes spin{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
